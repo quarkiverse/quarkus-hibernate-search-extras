@@ -1,0 +1,134 @@
+[.configuration-legend]
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
+|===
+
+h|[[quarkus-hibernate-search-orm-elasticsearch-aws_configuration]]link:#quarkus-hibernate-search-orm-elasticsearch-aws_configuration[Configuration property]
+
+h|Type
+h|Default
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.signing.enabled]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.signing.enabled[quarkus.hibernate-search-orm.elasticsearch.aws.signing.enabled]`
+
+[.description]
+--
+Whether requests should be signed using the AWS credentials.
+--|boolean 
+|`false`
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.region]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.region[quarkus.hibernate-search-orm.elasticsearch.aws.region]`
+
+[.description]
+--
+An Amazon Web Services region that hosts the Elasticsearch service.
+
+Must be provided if signing is enabled; the region won't be automatically detected.
+
+See `software.amazon.awssdk.regions.Region` for available regions.
+--|Region 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials[quarkus.hibernate-search-orm.elasticsearch.aws.credentials]`
+
+[.description]
+--
+Defines the credentials provider.
+--|AwsCredentialsProviderConfig 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.signing.enabled]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.signing.enabled[quarkus.hibernate-search-orm.elasticsearch.backends."backend-name".aws.signing.enabled]`
+
+[.description]
+--
+Whether requests should be signed using the AWS credentials.
+--|boolean 
+|`false`
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.region]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.region[quarkus.hibernate-search-orm.elasticsearch.backends."backend-name".aws.region]`
+
+[.description]
+--
+An Amazon Web Services region that hosts the Elasticsearch service.
+
+Must be provided if signing is enabled; the region won't be automatically detected.
+
+See `software.amazon.awssdk.regions.Region` for available regions.
+--|Region 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials[quarkus.hibernate-search-orm.elasticsearch.backends."backend-name".aws.credentials]`
+
+[.description]
+--
+Defines the credentials provider.
+--|AwsCredentialsProviderConfig 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.signing.enabled]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.signing.enabled[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.aws.signing.enabled]`
+
+[.description]
+--
+Whether requests should be signed using the AWS credentials.
+--|boolean 
+|`false`
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.region]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.region[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.aws.region]`
+
+[.description]
+--
+An Amazon Web Services region that hosts the Elasticsearch service.
+
+Must be provided if signing is enabled; the region won't be automatically detected.
+
+See `software.amazon.awssdk.regions.Region` for available regions.
+--|Region 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.aws.credentials]`
+
+[.description]
+--
+Defines the credentials provider.
+--|AwsCredentialsProviderConfig 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.signing.enabled]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.signing.enabled[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.backends."backend-name".aws.signing.enabled]`
+
+[.description]
+--
+Whether requests should be signed using the AWS credentials.
+--|boolean 
+|`false`
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.region]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.region[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.backends."backend-name".aws.region]`
+
+[.description]
+--
+An Amazon Web Services region that hosts the Elasticsearch service.
+
+Must be provided if signing is enabled; the region won't be automatically detected.
+
+See `software.amazon.awssdk.regions.Region` for available regions.
+--|Region 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.backends."backend-name".aws.credentials]`
+
+[.description]
+--
+Defines the credentials provider.
+--|AwsCredentialsProviderConfig 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+|===

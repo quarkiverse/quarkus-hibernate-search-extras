@@ -3,15 +3,15 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>quarkus-extensions-parent</artifactId>
-        <groupId>io.quarkus</groupId>
-        <version>999-SNAPSHOT</version>
+        <groupId>io.quarkiverse.hibernatesearchextras</groupId>
+        <artifactId>quarkus-hibernate-search-extras-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>quarkus-hibernate-search-orm-elasticsearch-aws-parent</artifactId>
-    <name>Quarkus - Hibernate Search - ORM + Elasticsearch - AWS Integration</name>
+    <name>Quarkus - Hibernate Search Extras - ORM + Elasticsearch - AWS Integration</name>
     <packaging>pom</packaging>
     <modules>
         <module>deployment</module>

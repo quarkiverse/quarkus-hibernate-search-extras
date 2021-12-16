@@ -4,6 +4,7 @@ include::./includes/attributes.adoc[]
 
 This set of extensions provide various extra features for the Quarkus Hibernate Search integration.
 
+[[aws-integration]]
 == AWS Integration
 
 [[aws-request-signing]]

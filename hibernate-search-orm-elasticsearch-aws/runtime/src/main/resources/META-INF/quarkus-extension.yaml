@@ -19,6 +19,7 @@ metadata:
   categories:
   - "data"
   - "cloud"
+  guide: https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html#aws-integration
   status: "stable"
   config:
   - "quarkus.hibernate-search-orm."

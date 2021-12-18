@@ -8,7 +8,7 @@
     </parent>
     <groupId>io.quarkiverse.hibernatesearchextras</groupId>
     <artifactId>quarkus-hibernate-search-extras-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <name>Quarkus - Hibernate Search Extras - Parent</name>
     <modules>
@@ -123,4 +123,8 @@
             </plugins>
         </pluginManagement>
     </build>
+
+  <scm>
+    <tag>1.0.1</tag>
+  </scm>
 </project>

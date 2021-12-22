@@ -32,7 +32,7 @@
 
         <!-- Defaults for integration tests -->
         <elasticsearch-server.version>7.10.0</elasticsearch-server.version>
-        <elasticsearch.image>docker.elastic.co/elasticsearch/elasticsearch-oss:${elasticsearch-server.version}</elasticsearch.image>
+        <elasticsearch.image>elastic/elasticsearch:${elasticsearch-server.version}</elasticsearch.image>
         <elasticsearch.protocol>http</elasticsearch.protocol>
     </properties>
     <dependencyManagement>

@@ -2,7 +2,7 @@
 
 include::./includes/attributes.adoc[]
 
-This set of extensions provide various extra features for the Quarkus Hibernate Search integration.
+This set of extensions provides various extra features for the Quarkus Hibernate Search integration.
 
 [[aws-integration]]
 == AWS Integration
@@ -13,7 +13,7 @@ This set of extensions provide various extra features for the Quarkus Hibernate 
 If you need to use https://docs.aws.amazon.com/elasticsearch-service/[Amazon’s managed Elasticsearch service],
 you will find it requires a proprietary authentication method involving request signing.
 
-To enable AWS request signing, an additional extension is required:
+To enable AWS request signing in Hibernate Search, an additional extension is required:
 
 [source,bash]
 ----

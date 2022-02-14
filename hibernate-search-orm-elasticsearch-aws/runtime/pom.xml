@@ -37,6 +37,57 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.bsc.maven</groupId>
+                <artifactId>maven-processor-plugin</artifactId>
+                <version>${maven-processor-plugin.version}</version>
+                <executions>
+                    <!-- Run annotation processors on quarkus-amazon-common,
+                         just to generate the documentation for AwsCredentialsProviderConfig,
+                         so we can embed it in our own documentation. -->
+                    <execution>
+                        <id>process</id>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <addCompileSourceRoots>false</addCompileSourceRoots>
+                            <includes>io/quarkus/amazon/**/*.java</includes>
+                            <processSourceArtifacts>io.quarkiverse.amazonservices:quarkus-amazon-common:${quarkus-amazon-services.version}</processSourceArtifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.quarkus</groupId>
+                        <artifactId>quarkus-extension-processor</artifactId>
+                        <version>${quarkus.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>io.quarkiverse.amazonservices</groupId>
+                        <artifactId>quarkus-amazon-common</artifactId>
+                        <version>${quarkus-amazon-services.version}</version>
+                    </dependency>
+                    <!-- Optional dependencies of quarkus-amazon-common
+                         These are necessary for annotation processing. -->
+                    <dependency>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>netty-nio-client</artifactId>
+                        <version>${awssdk.version.for-annotation-processor}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>url-connection-client</artifactId>
+                        <version>${awssdk.version.for-annotation-processor}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>apache-client</artifactId>
+                        <version>${awssdk.version.for-annotation-processor}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-bootstrap-maven-plugin</artifactId>
             </plugin>

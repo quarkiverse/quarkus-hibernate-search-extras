@@ -6,10 +6,10 @@ import io.quarkus.deployment.annotations.BuildProducer;
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.annotations.ExecutionTime;
 import io.quarkus.deployment.annotations.Record;
-import io.quarkus.hibernate.search.orm.elasticsearch.HibernateSearchElasticsearchPersistenceUnitConfiguredBuildItem;
-import io.quarkus.hibernate.search.orm.elasticsearch.HibernateSearchIntegrationRuntimeConfiguredBuildItem;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRecorder;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRuntimeConfig;
+import io.quarkus.hibernate.search.orm.elasticsearch.deployment.HibernateSearchElasticsearchPersistenceUnitConfiguredBuildItem;
+import io.quarkus.hibernate.search.orm.elasticsearch.deployment.HibernateSearchIntegrationRuntimeConfiguredBuildItem;
 
 class HibernateSearchOrmElasticsearchAwsProcessor {
 

@@ -1,3 +1,5 @@
+
+:summaryTableId: quarkus-hibernate-search-orm-elasticsearch-aws
 [.configuration-legend]
 icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
 [.configuration-reference.searchable, cols="80,.^10,.^10"]
@@ -13,6 +15,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether requests should be signed using the AWS credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_SIGNING_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -26,6 +30,8 @@ An Amazon Web Services region that hosts the Elasticsearch service.
 Must be provided if signing is enabled; the region won't be automatically detected.
 
 See `software.amazon.awssdk.regions.Region` for available regions.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_REGION+++`
 --|Region 
 |
 
@@ -58,7 +64,10 @@ Available values:
               for more information.
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
---|`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++`
+-- a|
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
 |`default`
 
 
@@ -67,6 +76,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether requests should be signed using the AWS credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -80,6 +91,8 @@ An Amazon Web Services region that hosts the Elasticsearch service.
 Must be provided if signing is enabled; the region won't be automatically detected.
 
 See `software.amazon.awssdk.regions.Region` for available regions.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++`
 --|Region 
 |
 
@@ -112,7 +125,10 @@ Available values:
               for more information.
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
---|`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++`
+-- a|
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
 |`default`
 
 
@@ -121,6 +137,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether requests should be signed using the AWS credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_SIGNING_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -134,6 +152,8 @@ An Amazon Web Services region that hosts the Elasticsearch service.
 Must be provided if signing is enabled; the region won't be automatically detected.
 
 See `software.amazon.awssdk.regions.Region` for available regions.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_REGION+++`
 --|Region 
 |
 
@@ -166,7 +186,10 @@ Available values:
               for more information.
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
---|`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++`
+-- a|
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
 |`default`
 
 
@@ -175,6 +198,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether requests should be signed using the AWS credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -188,6 +213,8 @@ An Amazon Web Services region that hosts the Elasticsearch service.
 Must be provided if signing is enabled; the region won't be automatically detected.
 
 See `software.amazon.awssdk.regions.Region` for available regions.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++`
 --|Region 
 |
 
@@ -220,7 +247,10 @@ Available values:
               for more information.
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
---|`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++`
+-- a|
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
 |`default`
 
 
@@ -235,6 +265,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether this provider should fetch credentials asynchronously in the background. 
  If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -245,6 +277,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
  Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
 --|boolean 
 |`true`
 
@@ -255,6 +289,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether this provider should fetch credentials asynchronously in the background. 
  If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -265,6 +301,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
  Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
 --|boolean 
 |`true`
 
@@ -275,6 +313,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether this provider should fetch credentials asynchronously in the background. 
  If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -285,6 +325,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
  Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
 --|boolean 
 |`true`
 
@@ -295,6 +337,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether this provider should fetch credentials asynchronously in the background. 
  If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -305,6 +349,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
  Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
 --|boolean 
 |`true`
 
@@ -319,6 +365,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Access key id
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
 --|string 
 |
 
@@ -328,6 +376,19 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Secret access key
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.static-provider.session-token]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.static-provider.session-token[quarkus.hibernate-search-orm.elasticsearch.aws.credentials.static-provider.session-token]`
+
+[.description]
+--
+AWS Session token
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
 --|string 
 |
 
@@ -337,6 +398,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Access key id
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
 --|string 
 |
 
@@ -346,6 +409,19 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Secret access key
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials.static-provider.session-token]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials.static-provider.session-token[quarkus.hibernate-search-orm.elasticsearch.backends."backend-name".aws.credentials.static-provider.session-token]`
+
+[.description]
+--
+AWS Session token
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
 --|string 
 |
 
@@ -355,6 +431,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Access key id
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
 --|string 
 |
 
@@ -364,6 +442,19 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Secret access key
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials.static-provider.session-token]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials.static-provider.session-token[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.aws.credentials.static-provider.session-token]`
+
+[.description]
+--
+AWS Session token
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
 --|string 
 |
 
@@ -373,6 +464,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Access key id
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
 --|string 
 |
 
@@ -382,6 +475,19 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 AWS Secret access key
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials.static-provider.session-token]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials.static-provider.session-token[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.backends."backend-name".aws.credentials.static-provider.session-token]`
+
+[.description]
+--
+AWS Session token
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
 --|string 
 |
 
@@ -397,6 +503,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The name of the profile that should be used by this credentials provider. 
  If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
 --|string 
 |
 
@@ -407,6 +515,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The name of the profile that should be used by this credentials provider. 
  If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
 --|string 
 |
 
@@ -417,6 +527,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The name of the profile that should be used by this credentials provider. 
  If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
 --|string 
 |
 
@@ -427,6 +539,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The name of the profile that should be used by this credentials provider. 
  If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
 --|string 
 |
 
@@ -442,6 +556,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should fetch credentials asynchronously in the background. 
  If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -452,8 +568,10 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
  This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
-  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
 
 
@@ -462,6 +580,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -471,6 +591,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The command that should be executed to retrieve credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
 --|string 
 |
 
@@ -481,6 +603,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should fetch credentials asynchronously in the background. 
  If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -491,8 +615,10 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
  This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
-  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
 
 
@@ -501,6 +627,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -510,6 +638,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The command that should be executed to retrieve credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
 --|string 
 |
 
@@ -520,6 +650,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should fetch credentials asynchronously in the background. 
  If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -530,8 +662,10 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
  This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
-  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
 
 
@@ -540,6 +674,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -549,6 +685,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The command that should be executed to retrieve credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
 --|string 
 |
 
@@ -559,6 +697,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether the provider should fetch credentials asynchronously in the background. 
  If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
 --|boolean 
 |`false`
 
@@ -569,8 +709,10 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
  This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
-  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+  link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
 
 
@@ -579,6 +721,8 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -588,13 +732,15 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The command that should be executed to retrieve credentials.
+
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
 --|string 
 |
 
 |===
 ifndef::no-duration-note[]
 [NOTE]
-[[duration-note-anchor]]
+[id='duration-note-anchor-{summaryTableId}']
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

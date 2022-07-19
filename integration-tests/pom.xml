@@ -9,6 +9,10 @@
     <artifactId>quarkus-hibernate-search-extras-integration-tests-parent</artifactId>
     <packaging>pom</packaging>
     <name>Quarkus - Hibernate Search Extras - Integration Tests - Parent</name>
+    <properties>
+        <maven.deploy.skip>true</maven.deploy.skip>
+        <gpg.skip>true</gpg.skip>
+    </properties>
     <modules>
         <module>hibernate-search-orm-elasticsearch-aws</module>
     </modules>

@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <name>Quarkus - Hibernate Search Extras - Integration Tests - Parent</name>
     <properties>
+        <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
         <maven.deploy.skip>true</maven.deploy.skip>
         <gpg.skip>true</gpg.skip>
     </properties>

@@ -6,7 +6,7 @@
         <artifactId>quarkus-hibernate-search-extras-parent</artifactId>
         <version>1.1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>quarkus-hibernate-search-extras-integration-tests-parent</artifactId>
+    <artifactId>quarkus-hibernate-search-extras-release</artifactId>
     <packaging>pom</packaging>
     <name>Quarkus - Hibernate Search Extras - Release</name>
     <properties>

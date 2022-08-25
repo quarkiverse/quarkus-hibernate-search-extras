@@ -130,6 +130,38 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <!-- Skip the deploy plugin explicitly: we use nexus-staging-maven-plugin instead -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <!--
+                 Configure the nexus-staging-maven-plugin explicitly (without <extension>true</extension>)
+                 in order to work around a problem in the "release" module (see that module's POM for more info).
+             -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <extensions>false</extensions><!-- This is essential: do not put true here -->
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <!--
+                                This will only put artifacts in a staging directory.
+                                See the "release" module for actual deployment, at the end of the build.
+                             -->
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>

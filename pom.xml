@@ -140,7 +140,7 @@
              See the "release" module POM for more information.
          -->
         <profile>
-            <id>release-as-last-module</id>
+            <id>release</id>
             <activation>
                 <property>
                     <name>performRelease</name>

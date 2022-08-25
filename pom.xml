@@ -131,4 +131,24 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <!--
+             WARNING: this MUST be the very last profile,
+             so that the "release" module is the very last module,
+             in particular when deploying artifacts to a Nexus repository.
+             See the "release" module POM for more information.
+         -->
+        <profile>
+            <id>release-as-last-module</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                </property>
+            </activation>
+            <modules>
+                <module>release</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>

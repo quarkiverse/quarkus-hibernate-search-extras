@@ -30,7 +30,7 @@
         <awssdk.version.for-annotation-processor>2.17.127</awssdk.version.for-annotation-processor>
         <assertj.version>3.23.1</assertj.version>
         <wiremock-jre8.version>2.27.2</wiremock-jre8.version>
-        <wiremock-maven-plugin.version>7.2.0</wiremock-maven-plugin.version>
+        <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>
 
 
         <!-- Defaults for integration tests -->

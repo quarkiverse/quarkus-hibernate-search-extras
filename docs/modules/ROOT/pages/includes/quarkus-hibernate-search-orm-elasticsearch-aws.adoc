@@ -16,7 +16,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether requests should be signed using the AWS credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_SIGNING_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_SIGNING_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -31,7 +36,12 @@ Must be provided if signing is enabled; the region won't be automatically detect
 
 See `software.amazon.awssdk.regions.Region` for available regions.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_REGION+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_REGION+++`
+endif::add-copy-button-to-env-var[]
 --|Region 
 |
 
@@ -65,9 +75,14 @@ Available values:
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++`
+endif::add-copy-button-to-env-var[]
 -- a|
-`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `custom`, `anonymous` 
 |`default`
 
 
@@ -77,7 +92,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether requests should be signed using the AWS credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -92,7 +112,12 @@ Must be provided if signing is enabled; the region won't be automatically detect
 
 See `software.amazon.awssdk.regions.Region` for available regions.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++`
+endif::add-copy-button-to-env-var[]
 --|Region 
 |
 
@@ -126,9 +151,14 @@ Available values:
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++`
+endif::add-copy-button-to-env-var[]
 -- a|
-`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `custom`, `anonymous` 
 |`default`
 
 
@@ -138,7 +168,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether requests should be signed using the AWS credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_SIGNING_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_SIGNING_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -153,7 +188,12 @@ Must be provided if signing is enabled; the region won't be automatically detect
 
 See `software.amazon.awssdk.regions.Region` for available regions.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_REGION+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_REGION+++`
+endif::add-copy-button-to-env-var[]
 --|Region 
 |
 
@@ -187,9 +227,14 @@ Available values:
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_TYPE+++`
+endif::add-copy-button-to-env-var[]
 -- a|
-`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `custom`, `anonymous` 
 |`default`
 
 
@@ -199,7 +244,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 Whether requests should be signed using the AWS credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_SIGNING_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -214,7 +264,12 @@ Must be provided if signing is enabled; the region won't be automatically detect
 
 See `software.amazon.awssdk.regions.Region` for available regions.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_REGION+++`
+endif::add-copy-button-to-env-var[]
 --|Region 
 |
 
@@ -248,9 +303,14 @@ Available values:
 * `anonymous` - It always returns anonymous AWS credentials. Anonymous AWS credentials result in un-authenticated requests and will
                 fail unless the resource or API's policy has been configured to specifically allow anonymous access.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_TYPE+++`
+endif::add-copy-button-to-env-var[]
 -- a|
-`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `anonymous` 
+`default`, `static`, `system-property`, `env-variable`, `profile`, `container`, `instance-profile`, `process`, `custom`, `anonymous` 
 |`default`
 
 
@@ -264,9 +324,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether this provider should fetch credentials asynchronously in the background. 
- If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -276,9 +341,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
- Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`true`
 
@@ -288,9 +358,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether this provider should fetch credentials asynchronously in the background. 
- If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -300,9 +375,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
- Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`true`
 
@@ -312,9 +392,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether this provider should fetch credentials asynchronously in the background. 
- If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -324,9 +409,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
- Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`true`
 
@@ -336,9 +426,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether this provider should fetch credentials asynchronously in the background. 
- If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
+If this is `true`, threads are less likely to block, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -348,9 +443,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should reuse the last successful credentials provider in the chain. 
- Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
+Reusing the last successful credentials provider will typically return credentials faster than searching through the chain.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_DEFAULT_PROVIDER_REUSE_LAST_PROVIDER_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`true`
 
@@ -366,7 +466,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Access key id
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -377,7 +482,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Secret access key
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -388,7 +498,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Session token
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -399,7 +514,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Access key id
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -410,7 +530,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Secret access key
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -421,7 +546,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Session token
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -432,7 +562,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Access key id
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -443,7 +578,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Secret access key
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -454,7 +594,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Session token
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -465,7 +610,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Access key id
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_ACCESS_KEY_ID+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -476,7 +626,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Secret access key
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SECRET_ACCESS_KEY+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -487,7 +642,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 AWS Session token
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_STATIC_PROVIDER_SESSION_TOKEN+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -502,9 +662,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The name of the profile that should be used by this credentials provider. 
- If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -514,9 +679,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The name of the profile that should be used by this credentials provider. 
- If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -526,9 +696,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The name of the profile that should be used by this credentials provider. 
- If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -538,9 +713,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The name of the profile that should be used by this credentials provider. 
- If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
+If not specified, the value in `AWS_PROFILE` environment variable or `aws.profile` system property is used and defaults to `default` name.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROFILE_PROVIDER_PROFILE_NAME+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -555,9 +735,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should fetch credentials asynchronously in the background. 
- If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -567,9 +752,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
- This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
+endif::add-copy-button-to-env-var[]
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
@@ -581,7 +771,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -592,7 +787,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The command that should be executed to retrieve credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -602,9 +802,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should fetch credentials asynchronously in the background. 
- If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -614,9 +819,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
- This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
+endif::add-copy-button-to-env-var[]
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
@@ -628,7 +838,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -639,7 +854,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The command that should be executed to retrieve credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -649,9 +869,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should fetch credentials asynchronously in the background. 
- If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -661,9 +886,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
- This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
+endif::add-copy-button-to-env-var[]
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
@@ -675,7 +905,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -686,7 +921,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The command that should be executed to retrieve credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 
@@ -696,9 +936,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 Whether the provider should fetch credentials asynchronously in the background. 
- If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
+If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_ASYNC_CREDENTIAL_UPDATE_ENABLED+++`
+endif::add-copy-button-to-env-var[]
 --|boolean 
 |`false`
 
@@ -708,9 +953,14 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 [.description]
 --
 The amount of time between when the credentials expire and when the credentials should start to be refreshed. 
- This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
+This allows the credentials to be refreshed ++*++before++*++ they are reported to expire.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_CREDENTIAL_REFRESH_THRESHOLD+++`
+endif::add-copy-button-to-env-var[]
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor-{summaryTableId}[icon:question-circle[], title=More information about the Duration format]
 |`15S`
@@ -722,7 +972,12 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The maximum size of the output that can be returned by the external process before an exception is raised.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_PROCESS_OUTPUT_LIMIT+++`
+endif::add-copy-button-to-env-var[]
 --|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |`1024`
 
@@ -733,7 +988,81 @@ a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm
 --
 The command that should be executed to retrieve credentials.
 
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
 Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_PROCESS_PROVIDER_COMMAND+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+h|[[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.custom-provider-custom-credentials-provider-configuration]]link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.custom-provider-custom-credentials-provider-configuration[Custom credentials provider configuration]
+
+h|Type
+h|Default
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.custom-provider.name]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.aws.credentials.custom-provider.name[quarkus.hibernate-search-orm.elasticsearch.aws.credentials.custom-provider.name]`
+
+[.description]
+--
+The name of custom AwsCredentialsProvider bean.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials.custom-provider.name]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.elasticsearch.backends.-backend-name-.aws.credentials.custom-provider.name[quarkus.hibernate-search-orm.elasticsearch.backends."backend-name".aws.credentials.custom-provider.name]`
+
+[.description]
+--
+The name of custom AwsCredentialsProvider bean.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM_ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials.custom-provider.name]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.aws.credentials.custom-provider.name[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.aws.credentials.custom-provider.name]`
+
+[.description]
+--
+The name of custom AwsCredentialsProvider bean.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++`
+endif::add-copy-button-to-env-var[]
+--|string 
+|
+
+
+a| [[quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials.custom-provider.name]]`link:#quarkus-hibernate-search-orm-elasticsearch-aws_quarkus.hibernate-search-orm.-persistence-unit-name-.elasticsearch.backends.-backend-name-.aws.credentials.custom-provider.name[quarkus.hibernate-search-orm."persistence-unit-name".elasticsearch.backends."backend-name".aws.credentials.custom-provider.name]`
+
+[.description]
+--
+The name of custom AwsCredentialsProvider bean.
+
+ifdef::add-copy-button-to-env-var[]
+Environment variable: env_var_with_copy_button:+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++[]
+endif::add-copy-button-to-env-var[]
+ifndef::add-copy-button-to-env-var[]
+Environment variable: `+++QUARKUS_HIBERNATE_SEARCH_ORM__PERSISTENCE_UNIT_NAME__ELASTICSEARCH_BACKENDS__BACKEND_NAME__AWS_CREDENTIALS_CUSTOM_PROVIDER_NAME+++`
+endif::add-copy-button-to-env-var[]
 --|string 
 |
 

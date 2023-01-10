@@ -68,7 +68,7 @@
         </dependency>
         <dependency>
             <groupId>com.github.tomakehurst</groupId>
-            <artifactId>wiremock-jre8</artifactId>
+            <artifactId>wiremock</artifactId>
             <scope>test</scope>
         </dependency>
         <!-- Necessary for Wiremock for some reason -->

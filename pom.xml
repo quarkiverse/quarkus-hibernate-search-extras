@@ -23,13 +23,13 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>2.16.3.Final</quarkus.version>
+        <quarkus.version>3.0.0.Alpha4</quarkus.version>
         <maven-processor-plugin.version>4.5-jdk8</maven-processor-plugin.version>
 
-        <quarkus-amazon-services.version>1.6.3</quarkus-amazon-services.version>
+        <quarkus-amazon-services.version>2.0.0.Alpha1</quarkus-amazon-services.version>
         <awssdk.version.for-annotation-processor>2.19.9</awssdk.version.for-annotation-processor>
         <assertj.version>3.24.2</assertj.version>
-        <wiremock-jre8.version>2.27.2</wiremock-jre8.version>
+        <wiremock.version>2.27.2</wiremock.version>
         <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>
 
 
@@ -55,13 +55,9 @@
             </dependency>
             <dependency>
                 <groupId>com.github.tomakehurst</groupId>
-                <artifactId>wiremock-jre8</artifactId>
-                <version>${wiremock-jre8.version}</version>
+                <artifactId>wiremock</artifactId>
+                <version>${wiremock.version}</version>
                 <exclusions>
-                    <exclusion>
-                        <groupId>javax.servlet</groupId>
-                        <artifactId>javax.servlet-api</artifactId>
-                    </exclusion>
                     <exclusion>
                         <groupId>javax.xml.bind</groupId>
                         <artifactId>jaxb-api</artifactId>
@@ -118,15 +114,6 @@
                     <groupId>uk.co.automatictester</groupId>
                     <artifactId>wiremock-maven-plugin</artifactId>
                     <version>${wiremock-maven-plugin.version}</version>
-                    <dependencies>
-                        <!-- plugin defines "wiremock" artifactId (in provided scope), not the preferred "wiremock-jre8"
-                             which cannot be forced here, see https://issues.apache.org/jira/browse/MNG-6222 -->
-                        <dependency>
-                            <groupId>com.github.tomakehurst</groupId>
-                            <artifactId>wiremock</artifactId>
-                            <version>${wiremock-jre8.version}</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>

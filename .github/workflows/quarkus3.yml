@@ -1,4 +1,4 @@
-name: Build
+name: Quarkus 3 Build
 
 on:
   push:

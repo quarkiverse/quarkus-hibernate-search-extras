@@ -1,5 +1,5 @@
 name: quarkus-hibernate-search-extras
 title: Quarkus Hibernate Search Extras
-version: dev
+version: 1.x
 nav:
   - modules/ROOT/nav.adoc

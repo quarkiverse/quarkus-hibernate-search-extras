@@ -2,9 +2,6 @@ name: Build
 
 on:
   push:
-    branches:
-      - "main"
-      - "*.x"
     paths-ignore:
       - '.gitignore'
       - 'CODEOWNERS'
@@ -14,9 +11,6 @@ on:
       - '*.txt'
       - '.all-contributorsrc'
   pull_request:
-    branches:
-      - "main"
-      - "*.x"
     paths-ignore:
       - '.gitignore'
       - 'CODEOWNERS'

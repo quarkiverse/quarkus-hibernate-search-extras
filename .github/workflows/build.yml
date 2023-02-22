@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "main"
+      - "*.x"
     paths-ignore:
       - '.gitignore'
       - 'CODEOWNERS'
@@ -15,6 +16,7 @@ on:
   pull_request:
     branches:
       - "main"
+      - "*.x"
     paths-ignore:
       - '.gitignore'
       - 'CODEOWNERS'

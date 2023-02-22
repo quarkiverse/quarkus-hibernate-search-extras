@@ -26,7 +26,6 @@
         <dependency>
             <groupId>io.quarkiverse.amazonservices</groupId>
             <artifactId>quarkus-amazon-common</artifactId>
-            <version>${quarkus-amazon-services.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate.search</groupId>

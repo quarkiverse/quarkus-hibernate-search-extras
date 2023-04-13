@@ -35,7 +35,7 @@
 
 
         <!-- Defaults for integration tests -->
-        <elasticsearch-server.version>8.3.0</elasticsearch-server.version>
+        <elasticsearch-server.version>8.7.0</elasticsearch-server.version>
         <elasticsearch.image>elastic/elasticsearch:${elasticsearch-server.version}</elasticsearch.image>
         <elasticsearch.protocol>http</elasticsearch.protocol>
     </properties>

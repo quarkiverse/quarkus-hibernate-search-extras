@@ -84,6 +84,11 @@
                         <artifactId>apache-client</artifactId>
                         <version>${awssdk.version.for-annotation-processor}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>aws-crt-client</artifactId>
+                        <version>${awssdk.version.for-annotation-processor}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
             <plugin>

@@ -6,54 +6,38 @@ import java.util.Optional;
 import io.quarkus.amazon.common.runtime.AwsCredentialsProviderConfig;
 import io.quarkus.runtime.annotations.ConfigDocMapKey;
 import io.quarkus.runtime.annotations.ConfigGroup;
-import io.quarkus.runtime.annotations.ConfigItem;
+import io.smallrye.config.WithName;
+import io.smallrye.config.WithUnnamedKey;
 import software.amazon.awssdk.regions.Region;
 
 @ConfigGroup
-public class HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit {
+public interface HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit {
 
     /**
-     * Default backend
+     * Configuration for backends.
      */
-    @ConfigItem(name = "elasticsearch")
-    ElasticsearchBackendRuntimeConfig defaultBackend;
-
-    /**
-     * Named backends
-     */
-    @ConfigItem(name = "elasticsearch")
-    public ElasticsearchNamedBackendsRuntimeConfig namedBackends;
+    @WithName("elasticsearch")
+    @WithUnnamedKey // The default backend has the null key
+    @ConfigDocMapKey("backend-name")
+    Map<String, ElasticsearchBackendRuntimeConfig> backends();
 
     @ConfigGroup
-    public static class ElasticsearchNamedBackendsRuntimeConfig {
-
-        /**
-         * Named backends
-         */
-        @ConfigDocMapKey("backend-name")
-        public Map<String, ElasticsearchBackendRuntimeConfig> backends;
-
-    }
-
-    @ConfigGroup
-    public static class ElasticsearchBackendRuntimeConfig {
+    interface ElasticsearchBackendRuntimeConfig {
 
         /**
          * AWS services configurations
          */
-        @ConfigItem
-        ElasticsearchBackendAwsConfig aws;
+        ElasticsearchBackendAwsConfig aws();
 
     }
 
     @ConfigGroup
-    public static class ElasticsearchBackendAwsConfig {
+    interface ElasticsearchBackendAwsConfig {
 
         /**
-         * Whether requests should be signed using the AWS credentials.
+         * Configuration for signing.
          */
-        @ConfigItem(name = "signing.enabled")
-        boolean signingEnabled;
+        ElasticsearchBackendAwsSigningConfig signing();
 
         // @formatter:off
         /**
@@ -66,14 +50,22 @@ public class HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit {
          * @asciidoclet
          */
         // @formatter:on
-        @ConfigItem
-        Optional<Region> region;
+        Optional<Region> region();
 
         /**
          * Defines the credentials provider.
          */
-        @ConfigItem
-        AwsCredentialsProviderConfig credentials;
+        AwsCredentialsProviderConfig credentials();
+
+    }
+
+    @ConfigGroup
+    interface ElasticsearchBackendAwsSigningConfig {
+
+        /**
+         * Whether requests should be signed using the AWS credentials.
+         */
+        boolean enabled();
 
     }
 

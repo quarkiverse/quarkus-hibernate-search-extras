@@ -8,7 +8,6 @@ import java.util.function.BiConsumer;
 import org.hibernate.search.backend.elasticsearch.aws.cfg.ElasticsearchAwsBackendSettings;
 import org.hibernate.search.backend.elasticsearch.aws.spi.ElasticsearcAwsCredentialsProvider;
 
-import io.quarkus.hibernate.orm.runtime.PersistenceUnitUtil;
 import io.quarkus.hibernate.orm.runtime.integration.HibernateOrmIntegrationRuntimeInitListener;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendRuntimeConfig;
 import io.quarkus.runtime.annotations.Recorder;
@@ -19,10 +18,8 @@ public class HibernateSearchOrmElasticsearchAwsRecorder {
 
     public HibernateOrmIntegrationRuntimeInitListener createRuntimeInitListener(
             HibernateSearchOrmElasticsearchAwsRuntimeConfig runtimeConfig, String persistenceUnitName) {
-        HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit puConfig = PersistenceUnitUtil
-                .isDefaultPersistenceUnit(persistenceUnitName)
-                        ? runtimeConfig.defaultPersistenceUnit
-                        : runtimeConfig.persistenceUnits.get(persistenceUnitName);
+        HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit puConfig = runtimeConfig.persistenceUnits()
+                .get(persistenceUnitName);
         if (puConfig == null) {
             return null;
         }
@@ -41,19 +38,16 @@ public class HibernateSearchOrmElasticsearchAwsRecorder {
 
         @Override
         public void contributeRuntimeProperties(BiConsumer<String, Object> propertyCollector) {
-            contributeBackendRuntimeProperties(propertyCollector, null,
-                    runtimeConfig.defaultBackend);
-
-            for (Entry<String, ElasticsearchBackendRuntimeConfig> backendEntry : runtimeConfig.namedBackends.backends
-                    .entrySet()) {
+            for (Entry<String, ElasticsearchBackendRuntimeConfig> backendEntry : runtimeConfig.backends().entrySet()) {
                 contributeBackendRuntimeProperties(propertyCollector, backendEntry.getKey(), backendEntry.getValue());
             }
         }
 
         private void contributeBackendRuntimeProperties(BiConsumer<String, Object> propertyCollector, String backendName,
                 ElasticsearchBackendRuntimeConfig elasticsearchBackendConfig) {
-            HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendAwsConfig aws = elasticsearchBackendConfig.aws;
-            if (aws == null || !aws.signingEnabled) {
+            HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendAwsConfig aws = elasticsearchBackendConfig
+                    .aws();
+            if (aws == null || !aws.signing().enabled()) {
                 return;
             }
 
@@ -64,16 +58,16 @@ public class HibernateSearchOrmElasticsearchAwsRecorder {
                     ? "quarkus.hibernate-search-orm.elasticsearch"
                     : "quarkus.hibernate-search-orm.elasticsearch.backends." + backendName;
 
-            if (!aws.region.isPresent()) {
+            if (aws.region().isEmpty()) {
                 String propertyKey = configKeyRoot + ".aws.region";
                 throw new RuntimeException(
                         "When AWS request signing is enabled, the AWS region needs to be defined via property '"
                                 + propertyKey + "'.");
             }
             addBackendConfig(propertyCollector, backendName, ElasticsearchAwsBackendSettings.REGION,
-                    aws.region.get().id());
+                    aws.region().get().id());
 
-            AwsCredentialsProvider credentialProvider = aws.credentials.type.create(aws.credentials, configKeyRoot);
+            AwsCredentialsProvider credentialProvider = aws.credentials().type().create(aws.credentials(), configKeyRoot);
             addBackendConfig(propertyCollector, backendName, ElasticsearchAwsBackendSettings.CREDENTIALS_TYPE,
                     (ElasticsearcAwsCredentialsProvider) configurationPropertySource -> credentialProvider);
         }

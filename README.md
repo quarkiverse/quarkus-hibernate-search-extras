@@ -13,12 +13,13 @@ It is the new home for the `quarkus-hibernate-search-orm-elasticsearch-aws` exte
 
 ## Compatibility
 
-Quarkus Hibernate Search Extras provides two different version streams, one compatible with Quarkus 2.x and the other compatible with Quarkus 3.x.
+Quarkus Hibernate Search Extras provides different version streams for different versions of Quarkus.
 
-| Quarkus | Quarkus Hibernate Search Extras | Documentation                                                                                                  |
-|---------|---------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 2.x     | 1.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/1.x/index.html) |
-| 3.x     | 2.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html) |
+| Quarkus  | Quarkus Hibernate Search Extras | Documentation                                                                                                  |
+|----------|---------------------------------|----------------------------------------------------------------------------------------------------------------|
+| 2.x      | 1.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/1.x/index.html) |
+| 3.0, 3.1 | 2.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/2.x/index.html) |
+| 3.2+     | 3.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html) |
 
 Use the latest version of the corresponding stream, [the list of versions is available on Maven Central](https://search.maven.org/artifact/io.quarkiverse.hibernatesearchextras/quarkus-hibernate-search-orm-elasticsearch-aws).
 

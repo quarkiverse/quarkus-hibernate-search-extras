@@ -9,7 +9,7 @@ This set of extensions provides various extra features for the Quarkus Hibernate
 
 Quarkus Hibernate Search Extras provides different version streams for different versions of Quarkus.
 
-Refer to the https://github.com/quarkiverse/quarkus-hibernate-search-extras#compatibility[README on the `main` branch]
+Refer to the https://github.com/quarkiverse/quarkus-hibernate-search-extras/tree/main#compatibility[README on the `main` branch]
 to pick the appropriate version for your application.
 
 [[aws-integration]]

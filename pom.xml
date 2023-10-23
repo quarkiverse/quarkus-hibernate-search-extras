@@ -30,7 +30,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.4.3</quarkus.version>
+        <quarkus.version>3.5.0</quarkus.version>
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
         <quarkus-amazon-services.version>2.5.2</quarkus-amazon-services.version>
         <!-- Unfortunately we cannot use a BOM for Maven plugin dependencies -->

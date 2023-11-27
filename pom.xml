@@ -32,7 +32,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>3.6.0</quarkus.version>
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
-        <quarkus-amazon-services.version>2.5.3</quarkus-amazon-services.version>
+        <quarkus-amazon-services.version>2.7.2</quarkus-amazon-services.version>
         <!-- Unfortunately we cannot use a BOM for Maven plugin dependencies -->
         <awssdk.version.for-annotation-processor>2.21.17</awssdk.version.for-annotation-processor>
         <assertj.version>3.24.2</assertj.version>

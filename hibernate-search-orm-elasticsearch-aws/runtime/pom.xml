@@ -94,6 +94,12 @@
                         <artifactId>aws-crt-client</artifactId>
                         <version>${awssdk.version.for-annotation-processor}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>io.opentelemetry.instrumentation</groupId>
+                        <artifactId>opentelemetry-aws-sdk-2.2</artifactId>
+                        <optional>true</optional>
+                        <version>${awsotel.version.for-annotation-processor}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
             <plugin>

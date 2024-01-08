@@ -36,6 +36,37 @@
             <artifactId>graal-sdk</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Copy some of quarkus-amazon-common's optional dependencies,
+             just to take into account AwsCredentialsProviderConfig when generating configuration
+             and its documentation.
+             Make sure to mark these dependencies as optional here, too,
+             so that they don't affect applications but only the build. -->
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>netty-nio-client</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>url-connection-client</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>apache-client</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>aws-crt-client</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.opentelemetry.instrumentation</groupId>
+            <artifactId>opentelemetry-aws-sdk-2.2</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
@@ -46,10 +77,10 @@
                 <version>${maven-processor-plugin.version}</version>
                 <executions>
                     <!-- Run annotation processors on quarkus-amazon-common,
-                         just to generate the documentation for AwsCredentialsProviderConfig,
-                         so we can embed it in our own documentation. -->
+                         just to generate the necessary metadata/documentation for AwsCredentialsProviderConfig,
+                         so that it will get embedded in our own documentation. -->
                     <execution>
-                        <id>process</id>
+                        <id>process-quarkus-amazon-common</id>
                         <goals>
                             <goal>process</goal>
                         </goals>
@@ -66,39 +97,6 @@
                         <groupId>io.quarkus</groupId>
                         <artifactId>quarkus-extension-processor</artifactId>
                         <version>${quarkus.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>io.quarkiverse.amazonservices</groupId>
-                        <artifactId>quarkus-amazon-common</artifactId>
-                        <version>${quarkus-amazon-services.version}</version>
-                    </dependency>
-                    <!-- Optional dependencies of quarkus-amazon-common
-                         These are necessary for annotation processing. -->
-                    <dependency>
-                        <groupId>software.amazon.awssdk</groupId>
-                        <artifactId>netty-nio-client</artifactId>
-                        <version>${awssdk.version.for-annotation-processor}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>software.amazon.awssdk</groupId>
-                        <artifactId>url-connection-client</artifactId>
-                        <version>${awssdk.version.for-annotation-processor}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>software.amazon.awssdk</groupId>
-                        <artifactId>apache-client</artifactId>
-                        <version>${awssdk.version.for-annotation-processor}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>software.amazon.awssdk</groupId>
-                        <artifactId>aws-crt-client</artifactId>
-                        <version>${awssdk.version.for-annotation-processor}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>io.opentelemetry.instrumentation</groupId>
-                        <artifactId>opentelemetry-aws-sdk-2.2</artifactId>
-                        <optional>true</optional>
-                        <version>${awsotel.version.for-annotation-processor}</version>
                     </dependency>
                 </dependencies>
             </plugin>

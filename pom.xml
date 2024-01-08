@@ -24,7 +24,7 @@
       <tag>HEAD</tag>
   </scm>
     <properties>
-        <compiler-plugin.version>3.8.1</compiler-plugin.version>
+        <compiler-plugin.version>3.12.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -33,9 +33,6 @@
         <quarkus.version>3.6.4</quarkus.version>
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
         <quarkus-amazon-services.version>2.9.0</quarkus-amazon-services.version>
-        <!-- Unfortunately we cannot use a BOM for Maven plugin dependencies -->
-        <awssdk.version.for-annotation-processor>2.21.17</awssdk.version.for-annotation-processor>
-        <awsotel.version.for-annotation-processor>1.32.0-alpha</awsotel.version.for-annotation-processor>
         <assertj.version>3.25.1</assertj.version>
         <wiremock.version>2.27.2</wiremock.version>
         <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>
@@ -166,6 +163,32 @@
         </plugins>
     </build>
     <profiles>
+        <!-- The profiles `skippingAllTests` and `skippingIntegrationTests` are currently duplicates,
+            as one can't trigger the profile activation on either/or property -->
+        <profile>
+            <id>skippingAllTests</id>
+            <activation>
+                <property>
+                    <name>skipTests</name>
+                </property>
+            </activation>
+            <properties>
+                <!-- This is to avoid starting containers for each module needing integration test -->
+                <docker.skip>true</docker.skip>
+            </properties>
+        </profile>
+        <profile>
+            <id>skippingIntegrationTests</id>
+            <activation>
+                <property>
+                    <name>skipITs</name>
+                </property>
+            </activation>
+            <properties>
+                <!-- This is to avoid starting containers for each module needing integration test -->
+                <docker.skip>true</docker.skip>
+            </properties>
+        </profile>
         <!--
                  WARNING: this MUST be the very last profile,
                  so that the "release" module is the very last module,

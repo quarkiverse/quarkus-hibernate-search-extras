@@ -32,7 +32,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>3.6.5</quarkus.version>
         <maven-processor-plugin.version>4.5</maven-processor-plugin.version>
-        <quarkus-amazon-services.version>2.10.0</quarkus-amazon-services.version>
+        <quarkus-amazon-services.version>2.10.1</quarkus-amazon-services.version>
         <assertj.version>3.25.1</assertj.version>
         <wiremock.version>2.27.2</wiremock.version>
         <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>

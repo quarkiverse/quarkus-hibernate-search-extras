@@ -25,7 +25,8 @@ updates:
     ignore:
       # We require JDK 11, so we don't need "-jdk8"
       - dependency-name: "org.bsc.maven:maven-processor-plugin"
-        versions: ["*-jdk8"]
+        # Apparently patterns using wildcards are not supported here. Hopefully this will last until they drop these silly -jdk8 packages.
+        versions: ["5.0-jdk8", "5.1-jdk8", "5.2-jdk8", "5.3-jdk8", "5.4-jdk8", "5.5-jdk8", "5.6-jdk8", "5.7-jdk8", "5.8-jdk8", "5.9-jdk8"]
       # Releases too often, it's annoying
       - dependency-name: "org.assertj:*"
         update-types: ["version-update:semver-patch"]

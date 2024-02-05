@@ -25,7 +25,7 @@ updates:
     ignore:
       # We require JDK 11, so we don't need "-jdk8"
       - dependency-name: "org.bsc.maven:maven-processor-plugin"
-        versions: "*-jdk8"
+        versions: ["*-jdk8"]
       # Releases too often, it's annoying
       - dependency-name: "org.assertj:*"
         update-types: ["version-update:semver-patch"]

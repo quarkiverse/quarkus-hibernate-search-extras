@@ -9,6 +9,21 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      maven-plugins:
+        patterns:
+          - "*maven*plugin*"
+          - "org.apache.maven*:*"
+        exclude-patterns:
+          - "io.quarkus*"
+      quarkus:
+        patterns:
+          - "io.quarkus:*"
+          - "io.quarkus.*:*"
+          - "io.quarkiverse:*"
+          - "io.quarkiverse.*:*"
     ignore:
-      - dependency-name: "org.apache.maven.plugins:maven-compiler-plugin"
-      - dependency-name: "software.amazon.awssdk:*"
+      # Releases too often, it's annoying
+      - dependency-name: "org.assertj:*"
+        update-types: ["version-update:semver-patch"]
+

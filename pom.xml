@@ -30,7 +30,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.9.1</quarkus.version>
+        <quarkus.version>3.9.2</quarkus.version>
         <maven-processor-plugin.version>5.0</maven-processor-plugin.version>
         <quarkus-amazon-services.version>2.13.1</quarkus-amazon-services.version>
         <assertj.version>3.25.2</assertj.version>

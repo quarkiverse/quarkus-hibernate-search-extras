@@ -3,7 +3,7 @@
     <parent>
         <groupId>io.quarkiverse.hibernatesearchextras</groupId>
         <artifactId>quarkus-hibernate-search-extras-integration-tests-parent</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>4.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

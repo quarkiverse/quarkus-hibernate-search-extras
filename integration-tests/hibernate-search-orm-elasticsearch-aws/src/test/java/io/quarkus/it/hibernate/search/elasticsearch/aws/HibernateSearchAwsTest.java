@@ -53,7 +53,8 @@ public class HibernateSearchAwsTest {
                 .allSatisfy(request -> {
                     assertHeader(request, "Authorization")
                             .matches("AWS4-HMAC-SHA256 Credential=[a-zA-Z0-9]+/[0-9]+/us-east-1/es/aws4_request,"
-                                    + " SignedHeaders=host;x-amz-date, Signature=[a-f0-9]+");
+                                    // x-amz-content-sha256 only gets signed starting with Hibernate Search 7.2
+                                    + " SignedHeaders=host;(x-amz-content-sha256;)?x-amz-date, Signature=[a-f0-9]+");
                     assertHeader(request, "X-Amz-Date")
                             .matches("[0-9]{8}T[0-9]{6}Z");
                 });

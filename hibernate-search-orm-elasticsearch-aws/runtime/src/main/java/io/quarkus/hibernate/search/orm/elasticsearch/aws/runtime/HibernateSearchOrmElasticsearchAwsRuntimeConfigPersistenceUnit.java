@@ -3,7 +3,7 @@ package io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime;
 import java.util.Map;
 import java.util.Optional;
 
-import io.quarkus.amazon.common.runtime.AwsCredentialsProviderConfig;
+import io.quarkiverse.amazon.common.runtime.AwsCredentialsProviderConfig;
 import io.quarkus.runtime.annotations.ConfigDocMapKey;
 import io.quarkus.runtime.annotations.ConfigGroup;
 import io.smallrye.config.WithName;

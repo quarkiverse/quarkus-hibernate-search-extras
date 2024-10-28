@@ -72,35 +72,6 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>${maven-processor-plugin.version}</version>
-                <executions>
-                    <!-- Run annotation processors on quarkus-amazon-common,
-                         just to generate the necessary metadata/documentation for AwsCredentialsProviderConfig,
-                         so that it will get embedded in our own documentation. -->
-                    <execution>
-                        <id>process-quarkus-amazon-common</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <addCompileSourceRoots>false</addCompileSourceRoots>
-                            <includes>io/quarkus/amazon/**/*.java</includes>
-                            <processSourceArtifacts>io.quarkiverse.amazonservices:quarkus-amazon-common:${quarkus-amazon-services.version}</processSourceArtifacts>
-                        </configuration>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>io.quarkus</groupId>
-                        <artifactId>quarkus-extension-processor</artifactId>
-                        <version>${quarkus.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-extension-maven-plugin</artifactId>
             </plugin>

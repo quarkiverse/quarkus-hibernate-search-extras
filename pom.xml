@@ -33,7 +33,7 @@
         <wiremock.version>2.27.2</wiremock.version>
         <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>
         <!-- Defaults for integration tests -->
-        <elasticsearch-server.version>8.10.4</elasticsearch-server.version>
+        <elasticsearch-server.version>9.2.3</elasticsearch-server.version>
         <elasticsearch.image>elastic/elasticsearch:${elasticsearch-server.version}</elasticsearch.image>
         <elasticsearch.protocol>http</elasticsearch.protocol>
     </properties>

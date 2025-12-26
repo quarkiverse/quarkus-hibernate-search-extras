@@ -1,12 +1,12 @@
 package io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime;
 
-import static io.quarkus.hibernate.search.orm.elasticsearch.runtime.HibernateSearchConfigUtil.addBackendConfig;
+import static io.quarkus.hibernate.search.backend.elasticsearch.common.runtime.HibernateSearchConfigUtil.addBackendConfig;
 
 import java.util.Map.Entry;
 import java.util.function.BiConsumer;
 
 import org.hibernate.search.backend.elasticsearch.aws.cfg.ElasticsearchAwsBackendSettings;
-import org.hibernate.search.backend.elasticsearch.aws.spi.ElasticsearcAwsCredentialsProvider;
+import org.hibernate.search.backend.elasticsearch.aws.spi.ElasticsearchAwsCredentialsProvider;
 
 import io.quarkus.hibernate.orm.runtime.integration.HibernateOrmIntegrationRuntimeInitListener;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendRuntimeConfig;
@@ -76,7 +76,7 @@ public class HibernateSearchOrmElasticsearchAwsRecorder {
 
             AwsCredentialsProvider credentialProvider = aws.credentials().type().create(aws.credentials(), configKeyRoot);
             addBackendConfig(propertyCollector, backendName, ElasticsearchAwsBackendSettings.CREDENTIALS_TYPE,
-                    (ElasticsearcAwsCredentialsProvider) configurationPropertySource -> credentialProvider);
+                    (ElasticsearchAwsCredentialsProvider) configurationPropertySource -> credentialProvider);
         }
 
     }

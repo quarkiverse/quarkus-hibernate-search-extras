@@ -10,15 +10,22 @@ import org.hibernate.search.backend.elasticsearch.aws.spi.ElasticsearcAwsCredent
 
 import io.quarkus.hibernate.orm.runtime.integration.HibernateOrmIntegrationRuntimeInitListener;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendRuntimeConfig;
+import io.quarkus.runtime.RuntimeValue;
 import io.quarkus.runtime.annotations.Recorder;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
 
 @Recorder
 public class HibernateSearchOrmElasticsearchAwsRecorder {
 
-    public HibernateOrmIntegrationRuntimeInitListener createRuntimeInitListener(
-            HibernateSearchOrmElasticsearchAwsRuntimeConfig runtimeConfig, String persistenceUnitName) {
-        HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit puConfig = runtimeConfig.persistenceUnits()
+    private final RuntimeValue<HibernateSearchOrmElasticsearchAwsRuntimeConfig> runtimeConfig;
+
+    public HibernateSearchOrmElasticsearchAwsRecorder(
+            RuntimeValue<HibernateSearchOrmElasticsearchAwsRuntimeConfig> runtimeConfig) {
+        this.runtimeConfig = runtimeConfig;
+    }
+
+    public HibernateOrmIntegrationRuntimeInitListener createRuntimeInitListener(String persistenceUnitName) {
+        HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit puConfig = runtimeConfig.getValue().persistenceUnits()
                 .get(persistenceUnitName);
         if (puConfig == null) {
             return null;

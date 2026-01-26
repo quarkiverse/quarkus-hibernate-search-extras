@@ -1,4 +1,4 @@
-:quarkus-version: 3.30.4
+:quarkus-version: 3.30.0
 :quarkus-hibernate-search-extras-version: 5.0.0
 
 :quarkus-org-url: https://github.com/quarkusio

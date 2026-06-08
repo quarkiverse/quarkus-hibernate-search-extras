@@ -4,7 +4,7 @@
     <parent>
         <groupId>io.quarkiverse</groupId>
         <artifactId>quarkiverse-parent</artifactId>
-        <version>21</version>
+        <version>22</version>
     </parent>
     <groupId>io.quarkiverse.hibernatesearchextras</groupId>
     <artifactId>quarkus-hibernate-search-extras-parent</artifactId>
@@ -27,8 +27,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus.version>3.35.2</quarkus.version>
-        <quarkus-amazon-services.version>3.18.0</quarkus-amazon-services.version>
+        <quarkus.version>3.36.1</quarkus.version>
+        <quarkus-amazon-services.version>3.19.0</quarkus-amazon-services.version>
         <assertj.version>3.27.7</assertj.version>
         <wiremock.version>3.0.1</wiremock.version>
         <wiremock-maven-plugin.version>7.3.0</wiremock-maven-plugin.version>

@@ -43,7 +43,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yrodiere"><img src="https://avatars.githubusercontent.com/u/412878?v=4?s=100" width="100px;" alt="Yoann Rodière"/><br /><sub><b>Yoann Rodière</b></sub></a><br /><a href="https://github.com/quarkiverse/quarkus-hibernate-search-extras/commits?author=yrodiere" title="Code">💻</a> <a href="#maintenance-yrodiere" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://lesincroyableslivres.fr/"><img src="https://avatars.githubusercontent.com/u/1279749?v=4?s=100" width="100px;" alt="Guillaume Smet"/><br /><sub><b>Guillaume Smet</b></sub></a><br /><a href="#maintenance-gsmet" title="Maintenance">🚧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/marko-bekhta"><img src="https://avatars.githubusercontent.com/u/4004823?v=4?s=100" width="100px;" alt="Marko Bekhta"/><br /><sub><b>Marko Bekhta</b></sub></a><br /><a href="https://github.com/quarkiverse/quarkus-hibernate-search-extras/commits?author=marko-bekhta" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/marko-bekhta"><img src="https://avatars.githubusercontent.com/u/4004823?v=4?s=100" width="100px;" alt="Marko Bekhta"/><br /><sub><b>Marko Bekhta</b></sub></a><br /><a href="https://github.com/quarkiverse/quarkus-hibernate-search-extras/commits?author=marko-bekhta" title="Code">💻</a> <a href="#maintenance-marko-bekhta" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

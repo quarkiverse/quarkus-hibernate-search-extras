@@ -8,7 +8,7 @@ import java.util.function.BiConsumer;
 import org.hibernate.search.backend.elasticsearch.aws.cfg.ElasticsearchAwsBackendSettings;
 import org.hibernate.search.backend.elasticsearch.aws.spi.ElasticsearchAwsCredentialsProvider;
 
-import io.quarkus.hibernate.orm.runtime.integration.HibernateOrmIntegrationRuntimeInitListener;
+import io.quarkus.hibernate.orm.runtime.spi.HibernateOrmIntegrationRuntimeInitListener;
 import io.quarkus.hibernate.search.orm.elasticsearch.aws.runtime.HibernateSearchOrmElasticsearchAwsRuntimeConfigPersistenceUnit.ElasticsearchBackendRuntimeConfig;
 import io.quarkus.runtime.RuntimeValue;
 import io.quarkus.runtime.annotations.Recorder;

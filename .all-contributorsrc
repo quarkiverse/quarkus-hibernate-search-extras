@@ -23,6 +23,16 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "marko-bekhta",
+      "name": "Marko Bekhta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4004823?v=4",
+      "profile": "https://github.com/marko-bekhta",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,

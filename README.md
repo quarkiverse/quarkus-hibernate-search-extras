@@ -13,23 +13,15 @@ It is the new home for the `quarkus-hibernate-search-orm-elasticsearch-aws` exte
 
 ## Compatibility
 
-Quarkus Hibernate Search Extras provides different version streams for different versions of Quarkus.
+This is the `6.x` maintenance branch, targeting Quarkus 3.30+.
 
-| Quarkus      | Quarkus Hibernate Search Extras | Documentation                                                                                                  |
-|--------------|---------------------------------|----------------------------------------------------------------------------------------------------------------|
-| 2.x          | 1.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/1.x/index.html) |
-| 3.0, 3.1     | 2.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/2.x/index.html) |
-| 3.2 to 3.6   | 3.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/3.x/index.html) |
-| 3.7 to 3.15  | 4.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/4.x/index.html) |
-| 3.16 to 3.29 | 5.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/5.x/index.html) |
-| 3.30+        | 6.x                             | [Documentation](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html) |
-
+See the [compatibility table on the `main` branch](https://github.com/quarkiverse/quarkus-hibernate-search-extras/tree/main#compatibility) for other version streams.
 
 Use the latest version of the corresponding stream, [the list of versions is available on Maven Central](https://search.maven.org/artifact/io.quarkiverse.hibernatesearchextras/quarkus-hibernate-search-orm-elasticsearch-aws).
 
 ## Documentation
 
-The documentation for this extension can be found [here](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/dev/index.html).
+The documentation for this extension can be found [here](https://quarkiverse.github.io/quarkiverse-docs/quarkus-hibernate-search-extras/6.x/index.html).
 
 ## Contributors ✨
 
